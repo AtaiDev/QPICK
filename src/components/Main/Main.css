@@ -1,0 +1,30 @@
+.Main {
+    position: relative;
+}
+
+.Main_wrapper {
+    display: flex;
+    align-items: center;
+    background: #101010;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 #0000001A;
+}
+
+.Main_inner {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Main_title {
+    max-width: 300px;
+    margin: 0 50px auto auto;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.Main_images {
+    margin: -49px 0 -20px;
+}
