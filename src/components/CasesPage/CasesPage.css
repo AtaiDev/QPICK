@@ -1,0 +1,39 @@
+.CasesPage {
+    margin-bottom: 30px;
+}
+
+.CasesPage-wrapper {
+
+}
+
+.CasesPage-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #838383;
+}
+
+.CasesPage-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CasesPage-cards {
+    text-align: center;
+    width: 30%;
+    background: #fff;
+    box-shadow: 0 0 20px 0 #0000001A;
+    border-radius: 30px;
+}
+
+.CasesPage-img {
+    padding-top: 27px;
+}
+
+.CasesPage-name {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 20px 0 50px;
+    color: #1C1C27;
+}
