@@ -1,0 +1,230 @@
+.Headphones {
+    margin-bottom: 50px;
+}
+
+.Headphones-wrapper {
+}
+
+.Headphones-title {
+    color: #838383;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.Headphones-wrap {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.Headphones-inner {
+    position: relative;
+    width: 30%;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.Headphones-like {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 5;
+    transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+}
+
+.Headphones-like img {
+    width: 20px;
+    height: 18px;
+    display: block;
+    transition:
+            transform 0.25s ease,
+            filter 0.25s ease;
+}
+
+.Headphones-like:hover {
+    transform: scale(1.08);
+}
+
+.Headphones-like:hover img {
+    transform: scale(1.15);
+}
+
+.Headphones-like.liked {
+    animation: likeButton 0.35s ease;
+}
+
+.Headphones-like.liked img {
+    transform: scale(1.25);
+    filter:
+            brightness(0)
+            saturate(100%)
+            invert(42%)
+            sepia(95%)
+            saturate(2800%)
+            hue-rotate(325deg)
+            brightness(105%);
+}
+
+.Headphones-like.liked::after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 70, 100, 0.35);
+    animation: likeCircle 0.5s ease forwards;
+}
+
+.like-particles {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    font-size: 10px;
+    color: rgba(255, 70, 100, 0.9);
+    pointer-events: none;
+    animation: particleHeart 0.6s ease forwards;
+}
+
+.Headphones-image-wrapper {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px 0;
+    box-sizing: border-box;
+}
+
+.Headphones-img {
+    margin: 0 auto;
+    width: 66%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.Headphones-block {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.Headphones-caption {
+    color: #1C1C27;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 0 22px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.Headphones-price {
+    color: #FFA542;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 22px 0 10px;
+    white-space: nowrap;
+}
+
+.Headphones-rating {
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    padding-left: 34px;
+    color: #838383;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    background-image: url("../../assets/Rating_icon.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 22px 22px;
+}
+
+@keyframes likeButton {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.3);
+    }
+
+    65% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes likeCircle {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes particleHeart {
+    0% {
+        opacity: 0;
+        transform: translate(0, 5px) scale(0.5);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(8px, -15px) scale(1.2);
+    }
+}
+
+@media (max-width: 1000px) {
+    .Headphones-inner {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 650px) {
+    .Headphones-wrap {
+        gap: 20px;
+    }
+
+    .Headphones-inner {
+        width: 100%;
+        min-height: 420px;
+    }
+}
