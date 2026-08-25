@@ -7,10 +7,10 @@
 }
 
 .CasesPage-title {
-    font-weight: 600;
-    font-size: 20px;
     margin-bottom: 20px;
     color: #838383;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .CasesPage-inner {
@@ -20,11 +20,11 @@
 }
 
 .CasesPage-cards {
-    text-align: center;
     width: 30%;
+    text-align: center;
     background: #fff;
-    box-shadow: 0 0 20px 0 #0000001A;
     border-radius: 30px;
+    box-shadow: 0 0 20px 0 #0000001a;
 }
 
 .CasesPage-img {
@@ -32,8 +32,8 @@
 }
 
 .CasesPage-name {
-    font-weight: 600;
-    font-size: 17px;
     margin: 20px 0 50px;
-    color: #1C1C27;
+    color: #1c1c27;
+    font-size: 17px;
+    font-weight: 600;
 }
