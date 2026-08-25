@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "../Header/Header.css";
 import ArrowIcon from "../../assets/Arrow_icon.png";
 
+import { useFavorites } from "../../context/FavoritesContext";
+
 const Header = () => {
+    const { likedProducts } = useFavorites();
+
     const phoneModels: Record<string, string[]> = {
         Apple: [
             "iPhone 12",
@@ -181,10 +185,14 @@ const Header = () => {
                             )}
                         </div>
                     </div>
+
                     <div className="Header_inner">
                         <button className="Header_heart">
-                            <span className="Header_span">2</span>
+                            <span className="Header_span">
+                                {likedProducts.length}
+                            </span>
                         </button>
+
                         <button className="Header_basket">
                             <span className="Header_span">1</span>
                         </button>
