@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../Header/Header.css";
 import ArrowIcon from "../../assets/Arrow_icon.png";
+import "../Header/Header.css";
 
 import { useFavorites } from "../../context/FavoritesContext";
 
