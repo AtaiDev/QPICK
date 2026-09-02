@@ -1,0 +1,221 @@
+.HeadphonesBottom {
+    margin-bottom: 50px;
+}
+
+.HeadphonesBottom-wrapper {
+    margin-bottom: 60px;
+}
+
+.HeadphonesBottom-title {
+    margin-bottom: 20px;
+    color: #838383;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.HeadphonesBottom-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.HeadphonesBottom-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-height: 407px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.HeadphonesBottom-img {
+    display: block;
+    width: 66%;
+    height: 260px;
+    margin: 0 auto;
+    padding-top: 15px;
+    object-fit: contain;
+}
+
+.HeadphonesBottom-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 45px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.HeadphonesBottom-caption {
+    margin: 0 0 0 22px;
+    color: #1c1c27;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.HeadphonesBottom-price {
+    margin: 0 22px 0 10px;
+    color: #ffa542;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.HeadphonesBottom-rating {
+    display: flex;
+    align-items: center;
+    min-height: 22px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    padding-left: 34px;
+    color: #838383;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    background-image: url("../../assets/Rating_icon.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 22px 22px;
+}
+
+@media (max-width: 1000px) {
+    .HeadphonesBottom-inner {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 650px) {
+    .HeadphonesBottom-wrap {
+        gap: 20px;
+    }
+
+    .HeadphonesBottom-inner {
+        width: 100%;
+        min-height: 420px;
+    }
+}
+
+.HeadphonesBottom-like {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+}
+
+.HeadphonesBottom-like img {
+    display: block;
+    width: 20px;
+    height: 18px;
+    transition:
+            transform 0.25s ease,
+            filter 0.25s ease;
+}
+
+.HeadphonesBottom-like:hover {
+    transform: scale(1.08);
+}
+
+.HeadphonesBottom-like:hover img {
+    transform: scale(1.15);
+}
+
+.HeadphonesBottom-like.liked {
+    animation: HeadphonesBottom-likeButton 0.35s ease;
+}
+
+.HeadphonesBottom-like.liked img {
+    transform: scale(1.25);
+    filter:
+            brightness(0)
+            saturate(100%)
+            invert(42%)
+            sepia(95%)
+            saturate(2800%)
+            hue-rotate(325deg)
+            brightness(105%);
+}
+
+.HeadphonesBottom-like.liked::after {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba(255, 70, 100, 0.35);
+    border-radius: 50%;
+    content: '';
+    animation: HeadphonesBottom-likeCircle 0.5s ease forwards;
+}
+
+.HeadphonesBottom-like-particles {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    color: rgba(255, 70, 100, 0.9);
+    font-size: 10px;
+    pointer-events: none;
+    animation: HeadphonesBottom-particleHeart 0.6s ease forwards;
+}
+
+@keyframes HeadphonesBottom-likeButton {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.3);
+    }
+
+    65% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes HeadphonesBottom-likeCircle {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes HeadphonesBottom-particleHeart {
+    0% {
+        opacity: 0;
+        transform: translate(0, 5px) scale(0.5);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(8px, -15px) scale(1.2);
+    }
+}

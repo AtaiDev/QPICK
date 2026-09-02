@@ -1,10 +1,9 @@
 import React from 'react';
-import '../Headphones/Headphones.css';
-
 import Headphones1 from '../../assets/Headphones-1.png';
 import Headphones2 from '../../assets/Headphones-2.png';
 import Headphones3 from '../../assets/Headphones-3.png';
 import HeartIcon from '../../assets/like_icon-3.png';
+import '../Headphones/Headphones.css';
 
 import { useFavorites } from '../../context/FavoritesContext';
 
@@ -15,6 +14,7 @@ const productRatings = [4.7, 4.5, 4.3];
 
 const products = Array.from({ length: 2 }).flatMap(() =>
     productPhotos.map((photo, index) => ({
+        id: index + 1,
         photo,
         name: productNames[index],
         price: productPrices[index],
@@ -35,19 +35,23 @@ const Headphones = () => {
 
                     <div className="Headphones-wrap">
                         {products.map((product, index) => {
-                            const isLiked = likedProducts.includes(index);
+                            const productId = index + 1;
+                            const isLiked =
+                                likedProducts.includes(productId);
 
                             return (
                                 <div
                                     className="Headphones-inner"
-                                    key={index}
+                                    key={productId}
                                 >
                                     <button
                                         type="button"
                                         className={`Headphones-like ${
                                             isLiked ? 'liked' : ''
                                         }`}
-                                        onClick={() => toggleLike(index)}
+                                        onClick={() =>
+                                            toggleLike(productId)
+                                        }
                                         aria-label={
                                             isLiked
                                                 ? 'Убрать из избранного'
