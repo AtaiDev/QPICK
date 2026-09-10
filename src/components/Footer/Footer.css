@@ -1,0 +1,100 @@
+.Footer {
+    width: 100%;
+}
+
+.Footer-wrapper {
+    width: 100%;
+}
+
+.Footer-wrap {
+    min-height: 150px;
+    background: #ffffff;
+    border-radius: 30px 30px 0 0;
+    padding: 29px 25px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.Footer-logo {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+    color: #101010;
+}
+
+.Footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.Footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+.Footer-nav a:hover {
+    color: #FFA542;
+    transition: transform 1.8s;
+}
+
+.Footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.Footer-terms {
+    color: #000000;
+    font-size: 17px;
+}
+
+.Footer-languages {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Footer-language-icon {
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/Translator.png") no-repeat left center;
+}
+
+.Footer-languages button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #101010;
+    cursor: pointer;
+}
+
+.Footer-languages button:hover {
+    color: #ff8a00;
+}
+
+.Footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.Footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer-socials img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}

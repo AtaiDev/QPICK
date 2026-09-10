@@ -5,6 +5,7 @@ import CasesPage from "./components/CasesPage/CasesPage";
 import Headphones from "./components/Headphones/Headphones";
 import {FavoritesProvider} from "./context/FavoritesContext";
 import HeadphonesBottom from "./components/HeadphonesBottom/HeadphonesBottom";
+import Footer from "./components/Footer/Footer";
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <CasesPage />
             <Headphones />
             <HeadphonesBottom />
+            <Footer />
         </FavoritesProvider>
     </div>
   );
